@@ -1,33 +1,31 @@
-# Paste your pytest output summary line below after running `pytest`
-# pytest output: (paste the line like "==== 6 passed in ... ====" here)
+# pytest output: ============================== 4 passed in 0.01s ===============================
+# pylint score: 10.00/10
+
+"""Small functions for the Assignment 0 tools practice."""
 
 from __future__ import annotations
 
 
 def greet(name):
-    # TODO: return exactly: "Hello, <name>!"
-    # Add a docstring
-    raise NotImplementedError
+    """Return a greeting for name."""
+    return f"Hello, {name}!"
 
 
 def mean(nums):
     """Return the arithmetic mean of nums."""
-    # TODO
-    raise NotImplementedError
+    return sum(nums) / len(nums)
 
 
 def normalize(nums):
     """Return a new list scaled so it sums to 1.0."""
-    # TODO
-    raise NotImplementedError
+    total = sum(nums)
+    return [num / total for num in nums]
 
 
 def main() -> None:
     """Entry point for running this file directly."""
-    # TODO: print two lines exactly:
-    # 1) greet("Gradescope")
-    # 2) mean([2, 4, 6])
-    raise NotImplementedError
+    print(greet("Gradescope"))
+    print(mean([2, 4, 6]))
 
 
 if __name__ == "__main__":
